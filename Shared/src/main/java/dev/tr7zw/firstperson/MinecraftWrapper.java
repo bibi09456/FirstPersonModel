@@ -37,7 +37,7 @@ public class MinecraftWrapper {
 		double realYaw;
 		if(player == client.player && client.options.getCameraType() == CameraType.FIRST_PERSON && FirstPersonModelCore.isRenderingPlayer) {
 			abstractClientPlayerEntity_1 = (AbstractClientPlayer) player;
-			realYaw = Mth.rotLerp(client.getFrameTime(), abstractClientPlayerEntity_1.yBodyRotO, abstractClientPlayerEntity_1.yBodyRot);
+			realYaw = Mth.rotLerp(client.getFrameTime(), abstractClientPlayerEntity_1.yRotO, abstractClientPlayerEntity_1.getYRot());
 		}else {
 			offset = defValue;
 			return;
